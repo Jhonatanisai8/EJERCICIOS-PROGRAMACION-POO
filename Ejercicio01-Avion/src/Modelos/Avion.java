@@ -7,8 +7,9 @@ public class Avion {
     private int capacidadCarga;
     private int autonomia;
     private int altitudMaxima;
-    private SistemaNavegacion sistemaNavegacion;
-    //atributos staticos finales
+    private Cabina cabina;
+    //atributos  finales
     private final int VELOCIDAD_MAXIMA = 1200;
+    
     
 }
