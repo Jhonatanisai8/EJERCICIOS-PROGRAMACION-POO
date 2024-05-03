@@ -12,13 +12,16 @@ import Modelos.TipoPiloto;
 
 public class App {
     public static void main(String[] args) throws Exception {
+        ejemploAirbus();
+    }
+
+    public static void ejemploAirbus() {
         Avion airbus_A380;
         airbus_A380 = new Avion(new Piloto("Daniel Eli", "Ojeda Sanchez", TipoPiloto.PRIVADO), MarcaAvion.AIRBUS,
                 "Airbus-A380", 70, 120, new Estanque(2300), 100000,
                 new Cabina(5, SistemaNavegacion.RADAR, EquipajeEmergencia.CHALECOS_SALVAVIDAS),
                 new Motor(4, TipoMotor.Tubohelices), TipoAvion.NEGOCIOS);
         System.out.println(airbus_A380.verDetalleAvion());
-
     }
 
     public static void ejemploBoing() {
@@ -33,5 +36,6 @@ public class App {
         boeing747.setCabina(new Cabina(5, SistemaNavegacion.GPS, EquipajeEmergencia.MASCARAS_OXIGENO));
         boeing747.setMotor(new Motor(4, TipoMotor.Turbofan));
         System.out.println(boeing747.verDetalleAvion());
+
     }
 }
