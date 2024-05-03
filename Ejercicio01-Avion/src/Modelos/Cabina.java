@@ -35,4 +35,11 @@ public class Cabina {
         this.equipajeEmergencia = equipajeEmergencia;
     }
 
+    @Override
+    public String toString() {
+        return "\nNº de Asientos: " + numAsientos
+                + "\nSistema de Navegacion: " + sistemaNavegacion
+                + "\nEquipaje de Emergencia: " + equipajeEmergencia;
+    }
+
 }

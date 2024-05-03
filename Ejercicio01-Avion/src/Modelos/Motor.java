@@ -30,6 +30,10 @@ public class Motor {
         this.tipoMotor = tipoMotor;
     }
 
-    
+    @Override
+    public String toString() {
+        return "\nNº de Motores: " + numMotores
+                + "\nTipo de Motor: " + tipoMotor;
+    }
 
 }

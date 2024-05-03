@@ -33,6 +33,10 @@ public class Avion {
         this.numSerie = generarSerie();
         this.id = ++ultimoiD;
         this.tipoAvion = tipoAvion.COMERCIAL;
+        this.envergadura = 45;
+        this.lontitud = 70;
+        this.autonomia = 2500;
+
     }
 
     public Avion(Piloto piloto, MarcaAvion marcaAvion, String modelo) {
@@ -198,22 +202,22 @@ public class Avion {
         Avion.ultimoiD = ultimoiD;
     }
 
-    
     public String verDetalleAvion() {
-        return "Avion [id=" + id
-                + ", numSerie=" + numSerie
-                + ", piloto=" + piloto
-                + ", marcaAvion=" + marcaAvion
-                + ", modelo=" + modelo
-                + ", envergadura=" + envergadura
-                + ", lontitud=" + lontitud
-                + ", autonomia=" + autonomia
-                + ", estanque=" + estanque
-                + ", altitudMaxima=" + altitudMaxima
-                + ", cabina=" + cabina
-                + ", motor=" + motor
-                + ", tipoAvion=" + tipoAvion
-                + ", VELOCIDAD_MAXIMA=" + VELOCIDAD_MAXIMA + "]";
+        return "Avion "
+                + "\nId: " + id
+                + "\nNumero de Serie: " + numSerie
+                + "\nPiloto: " + getPiloto().mostrarDatos()
+                + "\nMarca: " + marcaAvion
+                + "\nModelo: " + modelo
+                + "\nEnvergadura:" + envergadura + " m"
+                + "\nLontitud: " + lontitud + " m"
+                + "\nAutonomia: " + autonomia + " Km"
+                + "\nEstanque: " + estanque + " Litros"
+                + "\nAltitud Maxima: " + altitudMaxima + " m.s.n.m"
+                + "\ncabina: " + cabina
+                + "\nMotor: " + motor
+                + "\ntipo de Avion: " + tipoAvion
+                + "\nVELOCIDAD_MAXIMA: " + VELOCIDAD_MAXIMA;
     }
 
 }

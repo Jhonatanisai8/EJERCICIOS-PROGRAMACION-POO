@@ -13,8 +13,7 @@ public class Piloto {
     }
 
     public String mostrarDatos() {
-        String mensaje = "Piloto de la Aeronave." +
-                "\nNombre: " + nombre
+        String mensaje = "\nNombre: " + nombre
                 + "\nApellido: " + apellido
                 + "\nTipo de Pilo: " + tipoPiloto;
 
