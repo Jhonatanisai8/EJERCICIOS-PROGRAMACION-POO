@@ -8,8 +8,8 @@ public class Avion {
     private int autonomia;
     private int altitudMaxima;
     private Cabina cabina;
-    //atributos  finales
+    // atributos finales
     private final int VELOCIDAD_MAXIMA = 1200;
-    
+    private static final String color = "Blanco";
     
 }
