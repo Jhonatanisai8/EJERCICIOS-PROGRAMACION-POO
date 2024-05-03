@@ -3,6 +3,8 @@ package Modelos;
 import java.util.Random;
 
 public class Avion {
+
+    //atributos
     private int numSerie;
     private TipoMotor tipoMotor;
     private int envergadura;
