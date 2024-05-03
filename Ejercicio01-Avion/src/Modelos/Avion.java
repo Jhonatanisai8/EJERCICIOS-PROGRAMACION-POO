@@ -29,12 +29,39 @@ public class Avion {
     public static final String COLOR_GRIS = "Gris";
     private static final String COLOR_NEGRO = "Negro";
 
-    public Avion(){
+    public Avion() {
+        this.numSerie = generarSerie();
         this.id = ++ultimoiD;
         this.tipoAvion = tipoAvion.COMERCIAL;
     }
 
-    
+    public Avion(Piloto piloto, MarcaAvion marcaAvion, String modelo) {
+        this();
+        this.piloto = piloto;
+        this.marcaAvion = marcaAvion;
+        this.modelo = modelo;
+    }
+
+    public Avion(Piloto piloto, MarcaAvion marcaAvion, String modelo, int envergadura, int lontitud) {
+        this(piloto, marcaAvion, modelo);
+        this.envergadura = envergadura;
+        this.lontitud = lontitud;
+    }
+
+    public Avion(Piloto piloto, MarcaAvion marcaAvion, String modelo, int envergadura, int lontitud,
+            Estanque estanque) {
+        this(piloto, marcaAvion, modelo, envergadura, lontitud);
+        this.estanque = estanque;
+    }
+
+    public Avion(Piloto piloto, MarcaAvion marcaAvion, String modelo, int envergadura, int lontitud, Estanque estanque,
+            int altitudMaxima, Cabina cabina, Motor motor, TipoAvion tipoAvion) {
+        this(piloto, marcaAvion, modelo, envergadura, lontitud, estanque);
+        this.altitudMaxima = altitudMaxima;
+        this.cabina = cabina;
+        this.motor = motor;
+        this.tipoAvion = tipoAvion;
+    }
 
     // METODO PARA GENERAR UN NUMERO DE SERIE AL AVION CREADO
     private String generarSerie() {
@@ -169,6 +196,24 @@ public class Avion {
 
     public static void setUltimoiD(int ultimoiD) {
         Avion.ultimoiD = ultimoiD;
+    }
+
+    
+    public String verDetalleAvion() {
+        return "Avion [id=" + id
+                + ", numSerie=" + numSerie
+                + ", piloto=" + piloto
+                + ", marcaAvion=" + marcaAvion
+                + ", modelo=" + modelo
+                + ", envergadura=" + envergadura
+                + ", lontitud=" + lontitud
+                + ", autonomia=" + autonomia
+                + ", estanque=" + estanque
+                + ", altitudMaxima=" + altitudMaxima
+                + ", cabina=" + cabina
+                + ", motor=" + motor
+                + ", tipoAvion=" + tipoAvion
+                + ", VELOCIDAD_MAXIMA=" + VELOCIDAD_MAXIMA + "]";
     }
 
 }
