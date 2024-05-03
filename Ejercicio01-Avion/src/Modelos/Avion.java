@@ -4,18 +4,37 @@ import java.util.Random;
 
 public class Avion {
 
-    //atributos
-    private int numSerie;
-    private TipoMotor tipoMotor;
+    // atributos
+    private int id;
+    private String numSerie;
+    private Piloto piloto;
+    private MarcaAvion marcaAvion;
+    private String modelo;
     private int envergadura;
     private int lontitud;
-    private int capacidadCarga;
     private int autonomia;
+    private Estanque estanque;
     private int altitudMaxima;
     private Cabina cabina;
+    private Motor motor;
+    private TipoAvion tipoAvion;
+
     // atributos finales
     private final int VELOCIDAD_MAXIMA = 1200;
     private static final String color = "Blanco";
+    private static int ultimoiD;
+
+    // colores constantes
+    public static final String COLOR_BLANCO = "Blanco";
+    public static final String COLOR_GRIS = "Gris";
+    private static final String COLOR_NEGRO = "Negro";
+
+    public Avion(){
+        this.id = ++ultimoiD;
+        this.tipoAvion = tipoAvion.COMERCIAL;
+    }
+
+    
 
     // METODO PARA GENERAR UN NUMERO DE SERIE AL AVION CREADO
     private String generarSerie() {
@@ -37,4 +56,119 @@ public class Avion {
 
         return sb.toString();
     }
+
+    // getters y setters
+
+    public int getId() {
+        return id;
+    }
+
+    public String getNumSerie() {
+        return numSerie;
+    }
+
+    public Piloto getPiloto() {
+        return piloto;
+    }
+
+    public MarcaAvion getMarcaAvion() {
+        return marcaAvion;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public int getEnvergadura() {
+        return envergadura;
+    }
+
+    public int getLontitud() {
+        return lontitud;
+    }
+
+    public int getAutonomia() {
+        return autonomia;
+    }
+
+    public Estanque getEstanque() {
+        return estanque;
+    }
+
+    public int getAltitudMaxima() {
+        return altitudMaxima;
+    }
+
+    public Cabina getCabina() {
+        return cabina;
+    }
+
+    public Motor getMotor() {
+        return motor;
+    }
+
+    public TipoAvion getTipoAvion() {
+        return tipoAvion;
+    }
+
+    public int getVELOCIDAD_MAXIMA() {
+        return VELOCIDAD_MAXIMA;
+    }
+
+    public static String getColor() {
+        return color;
+    }
+
+    public static int getUltimoiD() {
+        return ultimoiD;
+    }
+
+    public void setPiloto(Piloto piloto) {
+        this.piloto = piloto;
+    }
+
+    public void setMarcaAvion(MarcaAvion marcaAvion) {
+        this.marcaAvion = marcaAvion;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public void setEnvergadura(int envergadura) {
+        this.envergadura = envergadura;
+    }
+
+    public void setLontitud(int lontitud) {
+        this.lontitud = lontitud;
+    }
+
+    public void setAutonomia(int autonomia) {
+        this.autonomia = autonomia;
+    }
+
+    public void setEstanque(Estanque estanque) {
+        this.estanque = estanque;
+    }
+
+    public void setAltitudMaxima(int altitudMaxima) {
+        this.altitudMaxima = altitudMaxima;
+    }
+
+    public void setCabina(Cabina cabina) {
+        this.cabina = cabina;
+    }
+
+    public void setMotor(Motor motor) {
+        this.motor = motor;
+    }
+
+    public void setTipoAvion(TipoAvion tipoAvion) {
+        this.tipoAvion = tipoAvion;
+    }
+
+    public static void setUltimoiD(int ultimoiD) {
+        Avion.ultimoiD = ultimoiD;
+    }
+
 }
