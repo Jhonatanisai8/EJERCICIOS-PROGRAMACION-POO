@@ -212,7 +212,7 @@ public class Avion {
                 + "\nEnvergadura:" + envergadura + " m"
                 + "\nLontitud: " + lontitud + " m"
                 + "\nAutonomia: " + autonomia + " Km"
-                + "\nEstanque: " + estanque + " Litros"
+                + "\nEstanque: " + estanque.getCapacidad() + " Litros"
                 + "\nAltitud Maxima: " + altitudMaxima + " m.s.n.m"
                 + "\ncabina: " + cabina
                 + "\nMotor: " + motor
